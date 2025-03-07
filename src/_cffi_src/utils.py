@@ -80,5 +80,6 @@ int Cryptography_make_openssl_module(void) {
     ffi.set_source(
         module_name,
         verify_source,
+        extra_compile_args=["-g", "-O0"],
     )
     return ffi
